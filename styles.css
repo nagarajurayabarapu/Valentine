@@ -1,0 +1,68 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+body{
+    background-color: lightpink;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-image: url('images/bg.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.love{
+    border: 1px solid white;
+    border-radius: 20px;
+    height: 400px;
+    width: 750px;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    padding-top: 50px;
+    gap: 50px;
+    word-spacing: 5px;
+    background-color: white;
+    margin-top: 5%;
+}
+.love h1{
+    font-size: 48px;
+}
+.butt{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* gap: 100px; */
+    position: absolute;
+    bottom: 38%;
+    left: 40%;
+
+}
+
+.butt button{
+    width: 100px;
+    height: 35px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    font-weight: 600;
+    /* background-color:green; */
+
+}
+.butt button:hover{
+    cursor: pointer;
+}
+.bt1{
+    background-color:red;
+    color: white;
+}
+.bt2{
+    background-color: white;
+    position: relative;
+    left: 50%;
+    top: 70%;
+    transition: all 0.15s ease;
+}
