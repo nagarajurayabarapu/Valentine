@@ -5,19 +5,33 @@ const messages = [
     "Are you sure? 😢", "Think again 🤔", "Pleaseeee 🥺", "Don’t break my heart 💔", "Last chance 😶"
 ]
 let i=0
-nobtn.addEventListener("mouseover",()=>{
-    const x=Math.random()*(700-150);
-    const y=Math.random()*(300-150);
 
-    nobtn.style.left=x+'px'
-    nobtn.style.top=y+'px'
+function moveButton(){
+    const screenWidth=window.innerWidth
+    const screenHeight=window.innerHeight
+    const btnWidth=nobtn.offsetWidth  //100
+    const btnHeight=nobtn.offsetHeight //40
+    const randomX=Math.random()*(screenWidth-btnWidth-20)
+    const randomY=Math.random()*(screenHeight-btnHeight-20)
+    nobtn.style.position='absolute';
+    nobtn.style.left=randomX+'px'
+    nobtn.style.top=randomY+'px'
 
     nobtn.innerText=messages[i]
     i++;
     if (i===messages.length){
         i=0;
     }
-})
+    
+
+}
+
+nobtn.addEventListener("mouseover",moveButton)
+nobtn.addEventListener("touchstart",(e)=>{
+    e.preventDefault();
+    moveButton();
+});
+
 
 yesbtn.addEventListener('click',()=>{
     const song = new Audio("images/bgSong.mpeg");
